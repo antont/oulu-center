@@ -11,7 +11,7 @@ public class Trees : MonoBehaviour
 //		print (group + " " + group.transform.childCount);
 		for (int i = 0; i < group.transform.childCount; i += 3) {
 //			print (i);
-			Instantiate (speedTree, group.transform.GetChild (i).position, Quaternion.identity);
+			Instantiate (speedTree, group.transform.GetChild (i).position, Quaternion.Euler (0, Random.Range (0, 360), 0));
 			Destroy (group.transform.GetChild (i).gameObject);
 		}
 	}
